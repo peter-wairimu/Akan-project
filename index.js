@@ -1,5 +1,6 @@
 function getAkan(){
     let birthDay = document.getElementById("birthday").value;
+    let gender = document.querySelector('input[name="gender"]').value;
     birthDay.toString();
     let birthDate = birthDay.substr(0,2);
     let birthMonth = birthDay.substr(2,2);
@@ -28,4 +29,7 @@ function validateDate(day,month){
     else{
         return 1;
     }
+}
+function calcAkan(){
+
 }
