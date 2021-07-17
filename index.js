@@ -8,7 +8,6 @@ function getAkan(){
     let  x = validateDate(birthDate,birthMonth);
     if (x==1){
         let day = calcAkan(birthDate, birthMonth, birthYear);
-        alert(day);
         output(gender,day);
     }
     else{
@@ -17,9 +16,8 @@ function getAkan(){
 
     
 }
-const akanMale = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-// alert(akanMale[0]);
-const akanFemale = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+const akanMale = ["Kwame","Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"];
+const akanFemale = ["Ama","Akosua","Adwoa","Abenaa","Akua","Yaa","Afua"];
 function validateDate(day,month){
     let valid = true;
     if(day <= 0 || day > 31){
@@ -35,14 +33,13 @@ function validateDate(day,month){
         return 1;
     }
 }
-let days = ["Sat","Sun","Mon","Tue","Wen","Thur","Fri"];
 function output(gender,day){
     var toPrint = document.getElementById('akan');
     if(gender=="male"){
-        toPrint.innerHTML = "Hi, your Akan name : <i>"+ days[day] + "</i>";
+        toPrint.innerHTML = "Hi, your Akan name : <i>"+ akanMale[day] + "</i>";
     }
     else if(gender=="female"){
-        toPrint.innerHTML = "Hi, your Akan name is : <i>"+ days[day] + "</i>";
+        toPrint.innerHTML = "Hi, your Akan name is : <i>"+ akanFemale[day] + "</i>";
     }
     else{
         alert("Invalid gender");
