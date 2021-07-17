@@ -8,6 +8,8 @@ function getAkan(){
     let  x = validateDate(birthDate,birthMonth);
     if (x==1){
         calcAkan(birthDate, birthMonth, birthYear);
+        alert(day);
+        output(gender,day);
     }
     else{
         alert("Invalid date!");
@@ -16,6 +18,7 @@ function getAkan(){
     
 }
 const akanMale = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+alert(akanMale[0]);
 const akanFemale = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 function validateDate(day,month){
     let valid = true;
@@ -37,6 +40,19 @@ function calcAkan(day, month, year){
     DD = day;
     CC = year.substr(0,2);
     YY = year.substr(2,2);
-    d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+    alert(CC)
+    d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) CC ) + ((26*(MM+1)/10)) + DD );
+    alert(d%7);
     return d;
+}
+function output(gender,day){
+    if(gender=="male"){
+        alert(akanMale[day]);
+    }
+    else if(gender=="female"){
+        alert(akanFemale[day]);
+    }
+    else{
+        alert("error");
+    }
 }

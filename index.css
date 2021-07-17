@@ -1,0 +1,9 @@
+*{
+   margin: auto;
+   height: auto;
+}
+body{
+    background-image: url("assests/splash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
