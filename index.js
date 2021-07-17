@@ -46,12 +46,12 @@ function calcAkan(day, month, year){
     return d1;
 }
 function output(gender,day){
-    
+    var toPrint = document.getElementById('akan');
     if(gender=="male"){
-        alert(akanMale[day]);
+        toPrint.innerHTML = "Your Akan name is : "+ akanMale[day];
     }
     else if(gender=="female"){
-        alert(akanFemale[day]);
+        toPrint.innerHTML = "Your Akan name is : "+ akanFemale[day];
     }
     else{
         alert("Invalid gender");
