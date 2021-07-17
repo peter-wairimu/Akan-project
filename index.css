@@ -7,3 +7,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+h1{
+    color:rgb(255, 0, 0);
+    font-family:
+    font-size:3em;
+    letter-spacing: 0.1em;
+    /* font-weight: 2000; */
+    text-align:center;
+    margin-top:3vh;
+}
