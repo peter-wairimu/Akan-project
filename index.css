@@ -14,7 +14,6 @@ h1{
     font-size:3em;
     font-weight: bold;
     letter-spacing: 0.1em;
-    /* font-weight: 2000; */
     text-align:center;
     margin-top:3vh;
 }
@@ -42,11 +41,9 @@ h2{
     margin-top:10px;
 }
 .form input[type="number"]{
-    /* color:white; */
     width: 30vw;
     height: 4vh;
     padding-left:10px;
-    /* background:rgb(102, 95, 91); */
     border-radius: 2vw;
 }
 .form input[type="button"]{
