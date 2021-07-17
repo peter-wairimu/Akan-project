@@ -8,7 +8,7 @@ function getAkan(){
     let  x = validateDate(birthDate,birthMonth);
     if (x==1){
         let day = calcAkan(birthDate, birthMonth, birthYear);
-        // alert(day);
+        alert(day);
         output(gender,day);
     }
     else{
@@ -35,16 +35,6 @@ function validateDate(day,month){
         return 1;
     }
 }
-function calcAkan(day, month, year){
-    MM = month;
-    DD = day;
-    CC = year.substr(0,2);
-    YY = year.substr(2,2);
-    // alert(CC)
-    let d1 = ( ( (CC/4) -2*CC-1) + Math.ceil((5*YY/4) ) + Math.ceil((26*(MM+1)/10)) + DD ) % 7
-    // alert(d1);
-    return d1;
-}
 function output(gender,day){
     var toPrint = document.getElementById('akan');
     if(gender=="male"){
@@ -67,4 +57,14 @@ function getGender(ele){
     else{
         return "";
     }
+}
+function calcAkan(date,month,year){
+    let y0 = year - (14 - month) / 12;
+    let x = y0 + y0/4 - y0/100 + y0/400;
+    let m0 = month + 12*((14 - month)/12) - 2;
+    // let day = (date + x + %7;
+    let res = date + x
+    let resInt = parseInt(Math.floor(res))
+    let resInt2 = parseInt(Math.floor((31*m0)/12))
+    return (resInt + resInt2) % 7;
 }
