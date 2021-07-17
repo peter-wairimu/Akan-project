@@ -9,8 +9,9 @@ body{
 }
 h1{
     color:rgb(255, 0, 0);
-    font-family:
+    font-family: 'Indie Flower', cursive;
     font-size:3em;
+    font-weight: bold;
     letter-spacing: 0.1em;
     /* font-weight: 2000; */
     text-align:center;
