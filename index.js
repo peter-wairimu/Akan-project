@@ -17,9 +17,9 @@ function getAkan(){
 
     
 }
-const akanMale = ["Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame","Kwasi"];
+const akanMale = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 // alert(akanMale[0]);
-const akanFemale = ["Adwoa","Abenaa","Akua","Yaa","Afua","Ama","Akosua"];
+const akanFemale = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 function validateDate(day,month){
     let valid = true;
     if(day <= 0 || day > 31){
@@ -35,13 +35,14 @@ function validateDate(day,month){
         return 1;
     }
 }
+let days = ["Sat","Sun","Mon","Tue","Wen","Thur","Fri"];
 function output(gender,day){
     var toPrint = document.getElementById('akan');
     if(gender=="male"){
-        toPrint.innerHTML = "Your Akan name is : "+ akanMale[day];
+        toPrint.innerHTML = "Hi, your Akan name : <i>"+ days[day] + "</i>";
     }
     else if(gender=="female"){
-        toPrint.innerHTML = "Your Akan name is : "+ akanFemale[day];
+        toPrint.innerHTML = "Hi, your Akan name is : <i>"+ days[day] + "</i>";
     }
     else{
         alert("Invalid gender");
@@ -59,12 +60,39 @@ function getGender(ele){
     }
 }
 function calcAkan(date,month,year){
-    let y0 = year - (14 - month) / 12;
-    let x = y0 + y0/4 - y0/100 + y0/400;
-    let m0 = month + 12*((14 - month)/12) - 2;
-    // let day = (date + x + %7;
-    let res = date + x
-    let resInt = parseInt(Math.floor(res))
-    let resInt2 = parseInt(Math.floor((31*m0)/12))
-    return (resInt + resInt2) % 7;
+    let keys = [1,4,4,0,2,5,0,3,6,1,4,6];
+    let yr = year % 100;
+    let key = keys[month-1];
+    let calc1, calc2, calc3;
+    let toAdd;
+    let toSub;
+    dt = parseInt(date);
+
+    switch(parseInt(year/100)){
+        case 20:
+            toAdd = 6;
+            break;
+        case 19:
+            toAdd = 0;
+            break;
+        case 18:
+            toAdd = 2;
+            break;
+        case 17:
+            toAdd = 4;
+            break;
+    }
+    if(yr%4==0){
+        if(month==1 || month==2){
+            toSub = 1;
+        }
+        else{
+            toSub = 0;
+        }
+    }
+    else{
+        toSub = 0;
+    }
+    calc1 = parseInt(yr/4) + parseInt(date) + keys[parseInt(month)-1] - toSub + toAdd + parseInt(yr);
+    return calc1 % 7;
 }
