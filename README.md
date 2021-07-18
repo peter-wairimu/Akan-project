@@ -5,6 +5,14 @@ Date, 10/07/2021
 
 By Peter Chege Wairimu.
 
+Instructions
+
+(i). Enter the day that you were born,
+(ii). Enter the month that you were born,
+(iii).Enter the year that you were born,
+(iv)click on your gender,
+(v)Click on submit button to see your Akan name.
+
 Description 
 
 These is a simple web application created and designed,to tell Ghanian people their name depending on the day of the week they were born. 
@@ -19,7 +27,7 @@ Technologies Used
 
 (4). Javascript.
 
-    ![](assests/plan.png)
+![](assests/plan.png)
 
 
 Support and contact details
