@@ -1,6 +1,6 @@
 # Akan Name,
 
-## Date, 10/07/2021
+## Date, 19/07/2021
 
 
 ## By Peter Chege Wairimu.
