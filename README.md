@@ -19,6 +19,9 @@ Technologies Used
 
 (4). Javascript.
 
+    ![](assests/plan.png)
+
+
 Support and contact details
 Incase of any queries or any clarification you can contact me via email or phone.
 
