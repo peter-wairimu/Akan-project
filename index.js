@@ -36,7 +36,7 @@ function validateDate(day,month){
 function output(gender,day){
     var toPrint = document.getElementById('akan');
     if(gender=="male"){
-        toPrint.innerHTML = "Hi, your Akan name : <i>"+ akanMale[day] + "</i>";
+        toPrint.innerHTML = "Hi, your Akan name is : <i>"+ akanMale[day] + "</i>";
     }
     else if(gender=="female"){
         toPrint.innerHTML = "Hi, your Akan name is : <i>"+ akanFemale[day] + "</i>";
