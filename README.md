@@ -10,6 +10,7 @@ Description
 These is a simple web application created and designed,to tell Ghanian people their name depending on the day of the week they were born. 
 
 Technologies Used
+
 (1).HTML.
 
 (2).Css.
